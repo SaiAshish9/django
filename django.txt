@@ -1,0 +1,18 @@
+#imports
+from django.contrib import admin
+from django.urls import path,include
+from django.db import models
+from django.template import loader 
+from django.http import HttpResponse
+from django.shortcuts import render,redirect
+
+
+
+#
+django admin <>
+python manage.py run-server 
+python manage.py startapp <>
+python manage.py migrate
+python manage.py make_migrations <>#settings.py
+python manage.py sqlmigrate <> 0001
+pythom manage.py migrate
