@@ -8,7 +8,7 @@ from django.shortcuts import render,redirect
 
 
 
-#
+#commands
 django admin <>
 python manage.py run-server 
 python manage.py startapp <>
