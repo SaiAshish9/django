@@ -1,0 +1,10 @@
+{% extends 'food/base.html' %}
+{% block body %}
+<form method="POST" class="form-control" style="margin:auto;position: relative;top:4rem; display:flex; flex-direction:column; width:50% ;align-items:center;" >
+    <!-- cross side scripting -->
+    {% csrf_token%}
+    {{form}}
+    <button  type="submit" class="btn btn-primary">Save</button>
+</form>
+
+{%endblock%}

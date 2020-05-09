@@ -1,0 +1,15 @@
+body{
+    background-color:lightyellow !important;
+}
+
+@media(max-width:765px){
+    .row{
+        display:flex !important;
+        flex-direction: column !important;
+        justify-content:center !important;
+        align-items:center !important;
+        position:absolute;
+        left:90px !important;
+    }
+
+}
