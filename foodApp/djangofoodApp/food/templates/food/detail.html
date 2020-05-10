@@ -9,17 +9,17 @@
         </div>
         <div class="col-md-6" style="position:absolute; top:400px;" >
                 <h1>
-                        {{item.item_name}}
+                        {{object.item_name}}
                     </h1>
                     
                     <h2>
-                        {{item.item_desc}}
+                        {{object.item_desc}}
                     </h2>
                     
                     <h3>
-                        Rs. {{item.item_price}}
+                        Rs. {{object.item_price}}
                     </h3>
-                <a class="btn btn-danger" href="{% url 'food:delete_item' item.id %}">Delete</a>
+                <a class="btn btn-danger" href="{% url 'food:delete_item' object.id %}">Delete</a>
 
             </div>
     
