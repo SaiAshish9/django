@@ -30,6 +30,14 @@
                         View Item
                         
                 </a>
+
+                {% if user.is_authenticated %}
+                     <a href="{% url 'logout' %}" style="text-shadow:1px 1px 1px white;">Logout</a>
+                     <a href="{% url 'profile' %}" style="text-shadow:1px 1px 1px white; margin-left:10px;">Profile</a>
+
+                     {%  else %}
+                     <a href="{% url 'login' %}" style="text-shadow:1px 1px 1px white;">Login</a>
+                {% endif %}
                 </div>
                 </nav>
 
