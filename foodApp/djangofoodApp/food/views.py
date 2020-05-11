@@ -3,10 +3,11 @@ from .models import Item
 from django.template import loader
 from django.shortcuts import render,redirect
 from .forms import ItemForm
-
 from django.views.generic.list import ListView
-
 from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView
+
+
 
 # Create your views here.
 
@@ -27,13 +28,6 @@ class FoodDetail(DetailView):
 
 
 
-def create_item(request):
-    form=ItemForm(request.POST or None)
-    if form.is_valid():
-        form.save()
-        return redirect('food:index')
-
-    return render(request, 'food/item-form.html',{'form':form})
 
 
 def update_item(request,id):
@@ -62,6 +56,32 @@ def index(req):
     }
     # return HttpResponse(template.render(context,req))
     return render(req, 'food/index.html ',context)
+
+
+class CreateItem(CreateView):
+    model=Item;
+    fields=['item_name','item_desc','item_price','item_image']
+    template_name='food/item-form.html'    
+    success_url = '/food'
+
+
+    def form_valid(self,form):
+        form.instance.user=self.request.user
+        return super().form_valid(form)
+
+
+
+def create_item(request):
+    form=ItemForm(request.POST or None)
+    if form.is_valid():
+        form.instance.user_name='hi'
+        form.save()
+        return redirect('food:index')
+
+    return render(request, 'food/item-form.html',{'form':form,'user':request.user})
+
+
+
 
 #class based view
 # .as_view()
