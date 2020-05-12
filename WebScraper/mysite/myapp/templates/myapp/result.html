@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<body>
+
+
+
+<div class="container" style="display:flex;align-items:center;justify-content:center;flex-direction:column;">
+
+    <div class="row m-5">
+
+<div class="col-md-12 m-5">
+    <h1>
+        Links Scraper
+    </h1>
+
+</div>
+
+
+<div  style="margin:20px;">
+    <form method="POST" action="/">
+        {% csrf_token %}
+        
+        <input  style="outline:none; box-shadow:none;" class="form-control" name="site" type="text" id="site" placeholder="enter site address" />
+
+    </div>
+
+    <div  style="margin:20px;">
+       
+        <button style="box-shadow: none;" class="btn btn-outline-dark" type="submit" >
+            Scrape
+        </button>
+
+    </div>
+</form>
+
+
+    <div  style="margin:20px;">
+       
+        <a  style="box-shadow: none;" class="btn btn-danger" href="/delete" >
+            Clear
+    </a>
+
+    </div>
+
+
+</div>
+
+<div class="row">
+
+        <div  >
+
+
+            <table class="table"  style="max-width:30vw;">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col" >ID </th>
+                        <th scope="col" > Name </th>
+                        <th scope="col" > Link </th>            </tr>
+                </thead>
+        
+                <tbody>
+        
+        {% for link in data %}
+        
+                    <tr>
+                           <td>
+                               {{ link.id }}
+                           </td>
+                           <td>
+                            {{ link.name }}
+                        </td>
+                        <td>
+                            {{ link.address }}
+                        </td>
+                    </tr>
+                </tbody>
+        
+        {% endfor %}
+        
+            </table>
+
+        </div>
+    </div>
+
+</div>
+
+
+    
+
+
+
+
+</body>
+</html>
