@@ -1,0 +1,64 @@
+#imports
+from django.contrib import admin
+from django.urls import path,include
+from django.db import models
+from django.template import loader 
+from django.http import HttpResponse
+from django.shortcuts import render,redirect
+from django import forms
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib import messages
+from django.contrib.auth import views as auth_views
+from django.contrib.auth.decorators import login_required
+from django.conf import settings
+from django.conf.static.urls import urls
+from django.contrib.auth.signals import post_save
+from django.dispatch import receiver
+from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
+
+urlpatterns +=[] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
+#methods 
+admin.site.register(<>)
+{{csrf_token}}
+template.get()
+item=item.objects.get(id=id)#pk=id ()
+render(req,'',context)
+form.is_valid()
+ItemForm(req.POST or None,instance=item)
+item.delete()
+req.method=='POST'
+"{% url 'food:delete-item' item.id %}"
+forms.EmailField()
+LOGIN_REDIRECTION_URL='food:index'
+
+#imports
+django-admin startproject <>
+python manage.py run-server 
+python manage.py startapp <>
+python manage.py migrate
+python manage.py makemigrations <>#settings.py
+python manage.py sqlmigrate <> 0001
+pythom manage.py migrate
+python manage.py shell
+
+
+
+
+
+
+#points
+
+Views
+URL Patterns
+Models
+Admin Panel
+Templates
+Static Files
+Authentication
+Django Signals
+Class Based Views
+
+
