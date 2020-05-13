@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+<body>
+
+    
+    <div class="container">
+
+
+<div class="row">
+
+<div class="col-md-7">
+
+
+
+    <form method="post" >
+
+{% csrf_token %}
+
+        <div class="form-group">
+          <label for="">Name</label>
+          <input type="text" class="form-control" id="name"  name="name" />
+        </div>
+       
+        <div class="form-group">
+            <label for="">Email</label>
+            <input type="email" class="form-control" id="email"  name="email" />
+          </div>
+
+          <div class="form-group">
+            <label for="">Phone</label>
+            <input type="tel" class="form-control" id="phone"  name="phone" />
+          </div>
+
+          <div class="form-group">
+            <label for="">About You</label>
+            <textarea  class="form-control" id="summary"  name="summary" ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="">Degree</label>
+            <input type="text" class="form-control" id="degree"  name="degree" />
+          </div>
+
+          <div class="form-group">
+            <label for="">School</label>
+            <input type="text" class="form-control" id="school"  name="school" />
+          </div>
+
+          <div class="form-group">
+            <label for="">University</label>
+            <input type="text" class="form-control" id="university"  name="university" />
+          </div>
+
+          <div class="form-group">
+            <label for="">Previous Work</label>
+            <textarea  class="form-control" id="previous_work"  name="previous_work" ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="">Skills</label>
+            <textarea type="text" class="form-control" id="skills"  name="skills" ></textarea>
+          </div>
+
+
+
+        <button type="submit" class="btn btn-dark">Submit</button>
+      </form>
+
+
+
+
+</div>
+
+</div>
+
+    </div>
+
+
+</body>
+
+
+</html>
