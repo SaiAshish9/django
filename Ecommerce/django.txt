@@ -1,3 +1,8 @@
+#virtual environment
+virtualenv ecomenv
+source bin/activate
+
+
 #imports
 from django.contrib import admin
 from django.urls import path,include
